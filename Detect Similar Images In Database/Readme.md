@@ -1,12 +1,12 @@
 
-Problem Statement
+**Problem Statement**
 You are provided with a dataset of ~5k 512x512 images, your program should accept an
 512x512 input image and return N images from the provided dataset similar to the input image.
 
-Solution:
+**Solution:**
 I have used a pre-trained ResNet50 network which is trained on the ImageNet database and transfer learn it to find the feature vector for the image in the  database using Pytorch and FastAI library.
 
-The whole process is done in following steps:
+###### The whole process is done in following steps:
     1. Load the data using dataset loaders of Pytorch using FastAI library
     2. Take a pre-trained network, in this case, a ResNet50 and remove it’s last fully connected layers
     3. Add new fully connected layers at the end of the network and train only those layers using the image in dataset, while keeping all the other layers frozen
